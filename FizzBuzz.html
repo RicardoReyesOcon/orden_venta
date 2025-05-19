@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>FizzBuzz Colorido</title>
+    
+</head>
+<body>
+    <h1>FizzBuzz del 1 al 100</h1>
+    <div class="fizzbuzz-output" id="output"></div>
+
+    <script>
+        const outputDiv = document.getElementById("output");
+
+        for (let i = 1; i <= 100; i++) {
+            let div = document.createElement("div");
+            div.classList.add("item");
+
+            if (i % 15 === 0) {
+                div.textContent = "FizzBuzz";
+                div.classList.add("fizzbuzz");
+            } else if (i % 3 === 0) {
+                div.textContent = "Fizz";
+                div.classList.add("fizz");
+            } else if (i % 5 === 0) {
+                div.textContent = "Buzz";
+                div.classList.add("buzz");
+            } else {
+                div.textContent = i;
+                div.classList.add("number");
+            }
+
+            outputDiv.appendChild(div);
+        }
+    </script>
+</body>
+</html>
